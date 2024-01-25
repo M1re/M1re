@@ -1,5 +1,5 @@
 
-<img src="https://github.com/M1re/M1re/assets/71421857/2cfe6c1e-98c4-483f-8d15-73905c6b5671" width="1600" height="400" />
+<img src="https://github.com/M1re/M1re/assets/71421857/2cfe6c1e-98c4-483f-8d15-73905c6b5671" width="1600" height="600" />
 
 <h1 align="center">Hi 👋, I'm Vladyslav Konokh</h1>
 <h3 align="center">I'm a .NET Software Engineer 💻!</h3>
