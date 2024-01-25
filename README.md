@@ -1,12 +1,12 @@
 
-<img src="https://github.com/M1re/M1re/assets/71421857/2cfe6c1e-98c4-483f-8d15-73905c6b5671" width="1400" height="300" />
+<img src="https://github.com/M1re/M1re/assets/71421857/2cfe6c1e-98c4-483f-8d15-73905c6b5671" width="900" height="150" />
 
 <h1 align="center">Hi 👋, I'm Vladyslav Konokh</h1>
 <h3 align="center">I'm a .NET Software Engineer 💻!</h3>
 
 - 🔭 I’m currently working on **.NET & React.js project.**
 
-- 🌱 I’m currently learning: **.NET and React**
+- 🌱 I’m currently learning: **.NET, React and DevOps.**
 
 - 📫 My mail is: **actuallydisrespectful@gmail.com**
 
