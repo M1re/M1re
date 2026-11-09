@@ -1,21 +1,48 @@
+<div align="center">
+  <img src="assets/banner.svg" alt="M1RE — Vladyslav Konokh, .NET Software Engineer" width="100%"/>
+</div>
+
 <p align="center">
-  <img src="https://github.com/M1re/M1re/assets/71421857/2cfe6c1e-98c4-483f-8d15-73905c6b5671" width=80% height=55%/>
-</p>
-<h1 align="center">Hi 👋, I'm Vladyslav Konokh</h1>
-<h3 align="center">I'm a .NET Software Engineer 💻!</h3>
-
-- 🔭 I’m currently working on **.NET & React.js project.**
-
-- 🌱 I’m currently learning: **.NET, React and DevOps.**
-
-- 📫 My mail is: **actuallydisrespectful@gmail.com**
-
-- ⚡ Fun fact: **Apple devices in ads often show 9:41. This was the time Steve Jobs unveiled the first iPhone!**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/vladyslav konokh" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vladyslav konokh" height="30" width="40" /></a>
+  <a href="https://www.linkedin.com/in/vladyslav-konokh"><img src="https://img.shields.io/badge/LINKEDIN-0A0A0B?style=for-the-badge&logo=linkedin&logoColor=C8FF00&labelColor=0A0A0B" alt="LinkedIn"/></a>
+  <a href="mailto:actuallydisrespectful@gmail.com"><img src="https://img.shields.io/badge/MAIL-0A0A0B?style=for-the-badge&logo=gmail&logoColor=FF2E88&labelColor=0A0A0B" alt="Mail"/></a>
+  <a href="https://m1re.github.io/EngineeringVault"><img src="https://img.shields.io/badge/ENGINEERING_VAULT-0A0A0B?style=for-the-badge&logo=obsidian&logoColor=00E5FF&labelColor=0A0A0B" alt="Engineering Vault"/></a>
+  <a href="https://github.com/M1re?tab=followers"><img src="https://img.shields.io/github/followers/M1re?style=for-the-badge&logo=github&logoColor=FF5A1F&label=FOLLOWERS&labelColor=0A0A0B&color=0A0A0B" alt="Followers"/></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/> </a> <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+<img src="assets/div-about.svg" alt="01 // ABOUT" width="100%"/>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <b>&gt; STATUS</b><br/>
+      Building backend systems on <b>.NET</b> with a <b>React</b> front.<br/><br/>
+      <b>&gt; TRAINING</b><br/>
+      Going deeper into <b>.NET</b>, <b>React</b> and <b>DevOps</b>.
+    </td>
+    <td width="50%" valign="top">
+      <b>&gt; FIELD NOTES</b><br/>
+      Writing everything I learn into the <a href="https://m1re.github.io/EngineeringVault">Engineering Vault</a>.<br/><br/>
+      <b>&gt; INTEL</b><br/>
+      Apple ads show <b>9:41</b>: the minute Steve Jobs unveiled the first iPhone.
+    </td>
+  </tr>
+</table>
+
+<img src="assets/div-contracts.svg" alt="02 // CONTRACTS" width="100%"/>
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://github.com/M1re/EngineeringVault"><img src="assets/contract-vault.svg" alt="Engineering Vault" width="100%"/></a></td>
+    <td width="50%"><a href="https://github.com/M1re/HighPriority"><img src="assets/contract-priority.svg" alt="HighPriority" width="100%"/></a></td>
+  </tr>
+</table>
+
+<img src="assets/div-loadout.svg" alt="03 // LOADOUT" width="100%"/>
+
+<img src="assets/loadout.svg" alt="Stack: C#, .NET, ASP.NET Core, React, TypeScript, MS SQL, MongoDB, Redis, Kafka, RabbitMQ, Docker, PowerShell" width="100%"/>
+
+<img src="assets/div-telemetry.svg" alt="04 // TELEMETRY" width="100%"/>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=M1re&hide_border=true&background=0A0A0B&stroke=2A2A2F&ring=C8FF00&fire=FF2E88&currStreakNum=C8FF00&currStreakLabel=C8FF00&sideNums=E8E8E2&sideLabels=7C7C78&dates=7C7C78&card_width=1000" alt="Contribution streak" width="100%"/>
+</p>
