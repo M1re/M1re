@@ -2,3 +2,5 @@ preview.html
 __pycache__/
 dist/
 .vault/
+.site/
+.omc/

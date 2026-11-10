@@ -11,7 +11,7 @@
 
 <img src="assets/div-about.svg" alt="01 // ABOUT" width="100%"/>
 
-<img src="assets/about.svg" alt="Status: building backend systems on .NET with a React front. Training: .NET, React, DevOps. Field notes in the Engineering Vault." width="100%"/>
+<img src="assets/about.svg" alt="Status: Building backend systems on .NET with a React front. Training: .NET, React, DevOps. Notes: Field notes in the Engineering Vault." width="100%"/>
 
 <img src="assets/div-contracts.svg" alt="02 // CONTRACTS" width="100%"/>
 
@@ -24,7 +24,7 @@
 
 <img src="assets/div-loadout.svg" alt="03 // LOADOUT" width="100%"/>
 
-<img src="assets/loadout.svg" alt="Stack: C#, .NET, ASP.NET Core, React, TypeScript, MS SQL, MongoDB, Redis, Kafka, RabbitMQ, Docker, PowerShell" width="100%"/>
+<img src="assets/loadout.svg" alt="Stack: C#, TypeScript, JavaScript, SQL, PowerShell, .NET, ASP.NET Core, ASP.NET Web API, REST APIs, Microservices, CQRS, MediatR, React, HTML, CSS, MS SQL, MongoDB, Redis, Kafka, RabbitMQ, Azure, AWS, GCP, Docker, GitHub Actions, GitLab CI/CD, Azure Bicep, Okta, Keycloak, OAuth 2.0, Unit Testing, Integration Testing" width="100%"/>
 
 <img src="assets/div-telemetry.svg" alt="04 // TELEMETRY" width="100%"/>
 

@@ -1,13 +1,40 @@
 """Generates the animated SVG assets for the M1re profile README.
 
 Run:  python gen.py      -> writes assets/*.svg and preview.html
+
+Status (ABOUT) and stack (LOADOUT) come from profile.yml in the
+M1re.github.io repo, the single source shared with the site and the
+resume. Set PROFILE=path/to/profile.yml to use a local copy instead.
 """
+import html
+import os
 import random
+import re
+import textwrap
+import urllib.request
 from pathlib import Path
+
+import yaml
 
 ROOT = Path(__file__).parent
 ASSETS = ROOT / "assets"
 ASSETS.mkdir(exist_ok=True)
+PROFILE_URL = "https://raw.githubusercontent.com/M1re/M1re.github.io/main/profile.yml"
+
+
+def load_profile():
+    src = os.environ.get("PROFILE")
+    if src:
+        text = Path(src).read_text(encoding="utf-8")
+    else:
+        with urllib.request.urlopen(PROFILE_URL, timeout=20) as r:
+            text = r.read().decode("utf-8")
+    return yaml.safe_load(text)
+
+
+def ok(v):
+    """Entries still marked TODO stay out of the README, same as on the site."""
+    return v is not None and str(v) != "" and "TODO" not in str(v)
 
 BG = "#0A0A0B"
 GRID = "#17171A"
@@ -239,14 +266,36 @@ def contract(num, name, desc_lines, tags, status, accent, progress):
 
 
 # ---------------------------------------------------------------- loadout
-def loadout():
-    slots = [
-        ("PRIMARY", [("C#", ACID), (".NET", ACID), ("ASP.NET CORE", ACID)]),
-        ("FRONTEND", [("REACT", CYAN), ("TYPESCRIPT", CYAN)]),
-        ("DATA", [("MS SQL", ORANGE), ("MONGODB", ORANGE), ("REDIS", ORANGE)]),
-        ("MESSAGING", [("KAFKA", PINK), ("RABBITMQ", PINK)]),
-        ("INFRA", [("DOCKER", WHITE), ("POWERSHELL", WHITE)]),
-    ]
+GROUP_COLORS = [ACID, CYAN, PINK, ORANGE, "#FFD400", WHITE]  # same order as the site
+
+
+def skill_groups(profile):
+    groups = []
+    for i, g in enumerate(profile.get("skills") or []):
+        items = [s for s in g.get("items") or [] if ok(s)]
+        if items:
+            groups.append((g["group"].upper(), items, GROUP_COLORS[i % len(GROUP_COLORS)]))
+    return groups
+
+
+def loadout(profile):
+    # Chips are sized to their text and wrap onto extra lines within a group.
+    X0, XMAX, GAP = 228, 1176, 14
+    chip_w = lambda name: 40 + len(name) * 11
+
+    slots = []  # (label, [(name, color, width)]); label only on a group's first line
+    for cat, items, col in skill_groups(profile):
+        chunks, line, x = [], [], X0
+        for name in (s.upper() for s in items):
+            w = chip_w(name)
+            if line and x + w > XMAX:
+                chunks.append(line)
+                line, x = [], X0
+            line.append((name, col, w))
+            x += w + GAP
+        chunks.append(line)
+        slots += [(cat if i == 0 else "", c) for i, c in enumerate(chunks)]
+
     W, rowh = 1200, 60
     H = 40 + len(slots) * rowh + 20
     css = """
@@ -258,14 +307,14 @@ def loadout():
     rows, n = [], 0
     for r, (cat, items) in enumerate(slots):
         y = 30 + r * rowh
-        rows.append(
-            f'<text x="24" y="{y + 30}" font-size="12" fill="{DIM}" letter-spacing="3">{cat}</text>'
-            f'<rect x="180" y="{y + 26}" width="20" height="1" fill="#2A2A2F"/>'
-        )
-        x = 210
-        for name, col in items:
+        if cat:
+            rows.append(
+                f'<text x="24" y="{y + 31}" font-size="11" fill="{DIM}" letter-spacing="2">{esc(cat)}</text>'
+                f'<rect x="200" y="{y + 26}" width="18" height="1" fill="#2A2A2F"/>'
+            )
+        x = X0
+        for name, col, w in items:
             n += 1
-            w = 300
             rows.append(
                 f'<g class="in" style="animation-delay:{0.08 * n:.2f}s">'
                 f'<rect x="{x}" y="{y + 6}" width="{w}" height="42" fill="#121215" stroke="#2A2A2F"/>'
@@ -287,17 +336,23 @@ def loadout():
 
 
 # ---------------------------------------------------------------- about panel
-ABOUT = [
-    ("STATUS", ACID, ["Building backend systems on .NET", "with a React front."]),
-    ("FIELD NOTES", CYAN, ["Writing everything I learn into", "the Engineering Vault."]),
-    ("TRAINING", PINK, ["Going deeper into .NET, React", "and DevOps."]),
-    ("INTEL", ORANGE, ["Apple ads show 9:41: the minute", "Steve Jobs unveiled the first iPhone."]),
-]
+ABOUT_COLORS = [ACID, CYAN, PINK, ORANGE]
+# README-only flavour block, used when profile.yml has fewer than four status lines.
+INTEL = ("INTEL", ["Apple ads show 9:41: the minute", "Steve Jobs unveiled the first iPhone."])
 
 
-def about():
-    """Four terminal-style blocks; each prints itself line by line."""
-    W, H = 1200, 300
+def about_blocks(profile):
+    blocks = [(k.upper(), textwrap.wrap(str(v), 34)[:2])
+              for k, v in (profile.get("status") or {}).items() if ok(v)][:4]
+    if len(blocks) < 4:
+        blocks.append(INTEL)
+    return [(label, ABOUT_COLORS[i], lines) for i, (label, lines) in enumerate(blocks)]
+
+
+def about(profile):
+    """Up to four terminal-style blocks; each prints itself line by line."""
+    ABOUT = about_blocks(profile)
+    W, H = 1200, 28 + ((len(ABOUT) + 1) // 2) * 130 + 12
     css = """
     .blink{animation:blink 1.1s steps(2,start) infinite}
     @keyframes blink{to{visibility:hidden}}
@@ -346,10 +401,23 @@ def fieldlog_head():
     return svg(W, H, body)
 
 
+def sync_readme_alts(profile):
+    """Keep the README image alt text (what screen readers and crawlers see) in step with the SVGs."""
+    readme = ROOT / "README.md"
+    s = readme.read_text(encoding="utf-8")
+    stack = ", ".join(name for _, items, _ in skill_groups(profile) for name in items)
+    status = " ".join(f"{k}: {v}." for k, v in (profile.get("status") or {}).items() if ok(v))
+    for asset, alt in (("about.svg", status), ("loadout.svg", f"Stack: {stack}")):
+        s = re.sub(rf'(<img src="assets/{re.escape(asset)}" alt=")[^"]*',
+                   lambda m: m.group(1) + html.escape(alt, quote=True), s)
+    readme.write_text(s, encoding="utf-8")
+
+
 def main():
+    profile = load_profile()
     files = {
         "banner.svg": banner(),
-        "about.svg": about(),
+        "about.svg": about(profile),
         "fieldlog-head.svg": fieldlog_head(),
         "div-about.svg": divider(1, "ABOUT", "SEC.01 — PROFILE.DAT", ACID),
         "div-contracts.svg": divider(2, "CONTRACTS", "SEC.02 — ACTIVE OPS", PINK),
@@ -367,10 +435,11 @@ def main():
             ["Pins HighPriority CPU class to a chosen app", "and keeps it there. Set once, forget."],
             ["POWERSHELL", "WINDOWS"], "SHIPPED", PINK, 1.0,
         ),
-        "loadout.svg": loadout(),
+        "loadout.svg": loadout(profile),
     }
     for name, content in files.items():
         (ASSETS / name).write_text(content, encoding="utf-8")
+    sync_readme_alts(profile)
 
     # Local preview: README is plain HTML, so wrap it in GitHub-dark chrome.
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
