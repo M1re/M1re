@@ -12,7 +12,7 @@
 
 <img src="assets/div-about.svg" alt="01 // ABOUT" width="100%"/>
 
-<img src="assets/about.svg" alt="Status: Building backend systems on .NET. Training: .NET, React, DevOps. Notes: Field notes in the Engineering Vault." width="100%"/>
+<img src="assets/about.svg" alt="Status: Building backend systems on .NET. Training: .NET, Kubernetes, DevOps. Notes: Field notes in the Engineering Vault." width="100%"/>
 
 <img src="assets/div-contracts.svg" alt="02 // CONTRACTS" width="100%"/>
 
@@ -29,7 +29,7 @@
 
 <img src="assets/div-loadout.svg" alt="03 // LOADOUT" width="100%"/>
 
-<img src="assets/loadout.svg" alt="Stack: C#, TypeScript, JavaScript, SQL, PowerShell, .NET, ASP.NET Core, ASP.NET Web API, REST APIs, Microservices, CQRS, MediatR, React, HTML, CSS, MS SQL, MongoDB, Redis, Kafka, RabbitMQ, Azure, AWS, GCP, Docker, GitHub Actions, GitLab CI/CD, Azure Bicep, Okta, Keycloak, OAuth 2.0, Unit Testing, Integration Testing" width="100%"/>
+<img src="assets/loadout.svg" alt="Stack: C#, Python, SQL, PowerShell, .NET, ASP.NET Core, ASP.NET Web API, Entity Framework Core, REST APIs, Microservices, CQRS, MediatR, xUnit, Unit Testing, Keycloak, Okta, OAuth 2.0, React, Angular, MS SQL, MongoDB, Azure Cosmos DB, Apache Solr, Azure Service Bus, RabbitMQ, Azure, Azure Functions, Azure Key Vault, Azure Bicep, AWS, Amazon EKS, Amazon ECR, GCP, Docker, Kubernetes, Helm, Docker Swarm, GitHub Actions, Azure DevOps, Datadog, Grafana, Kibana, ML.NET, ONNX, VoTT, ComfyUI" width="100%"/>
 
 <img src="assets/div-telemetry.svg" alt="04 // TELEMETRY" width="100%"/>
 
