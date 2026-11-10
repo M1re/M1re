@@ -168,7 +168,7 @@ def banner():
     <g clip-path="url(#reveal)">
       <g class="g1" fill="{PINK}">{title}</g>
       <g class="g2" fill="{CYAN}">{title}</g>
-      <g class="main" fill="{ACID}">{title}</g>
+      <g class="main" fill="{WHITE}">{title}</g>
     </g>
 
     <text x="72" y="292" font-size="30" font-weight="700" fill="{WHITE}" letter-spacing="8">VLADYSLAV KONOKH</text>
