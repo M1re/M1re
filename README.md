@@ -63,8 +63,8 @@
 </table>
 <!-- FIELD-LOG:END -->
 
-<!-- TOKEN BURN: enable after `npx tokscale@latest submit` creates the profile.
 <img src="assets/div-tokens.svg" alt="06 // TOKEN BURN" width="100%"/>
 
-<a href="https://tokscale.ai/u/M1re"><img src="https://tokscale.ai/api/embed/M1re/svg?template=terminal&color=green&theme=dark&graph=1&sort=cost" alt="AI token usage" width="100%"/></a>
-TOKEN BURN -->
+<p align="center">
+  <a href="https://tokscale.ai/u/M1re"><img src="https://tokscale.ai/api/embed/M1re/svg?template=terminal&color=green&theme=dark&graph=1&sort=cost" alt="AI token usage" width="600"/></a>
+</p>
