@@ -30,7 +30,11 @@
 
 <img src="assets/div-loadout.svg" alt="03 // LOADOUT" width="100%"/>
 
-<img src="assets/loadout.svg" alt="Stack: C#, Python, C++, SQL, T-SQL, PowerShell, .NET 10, .NET 8, .NET 6, ASP.NET Core, ASP.NET Web API, Entity Framework Core, LINQ, async/await, REST APIs, Microservices, CQRS, MediatR, xUnit, Unit Testing, Keycloak, Okta, OAuth 2.0, React, Angular, MS SQL Server, MongoDB, Azure Cosmos DB, Apache Solr, Azure Service Bus, RabbitMQ, Azure, Azure Functions, Azure Key Vault, Azure Bicep, AWS, Amazon EKS, Amazon ECR, GCP, Docker, Kubernetes, Helm, Docker Swarm, Git, GitHub Actions, Azure DevOps, Datadog, Grafana, Kibana, ML.NET, ONNX, VoTT, ComfyUI" width="100%"/>
+<<<<<<< Updated upstream
+<img src="assets/loadout.svg" alt="Stack: C#, Python, C++, SQL, PowerShell, .NET, ASP.NET Core, Entity Framework Core, REST APIs, Microservices, CQRS, xUnit, Keycloak, Okta, OAuth 2.0, React, Angular, MS SQL Server, MongoDB, Azure Cosmos DB, Apache Solr, Azure Service Bus, RabbitMQ, Azure, AWS, GCP, Docker, Docker Swarm, Kubernetes, Helm, Azure Bicep, Git, GitHub Actions, Azure DevOps, Datadog, Grafana, Kibana, ML.NET, ONNX, VoTT, ComfyUI" width="100%"/>
+=======
+<img src="assets/loadout.svg" alt="Stack: C#, Python, C++, SQL, PowerShell, .NET, ASP.NET Core, Entity Framework Core, REST APIs, Microservices, CQRS, xUnit, Keycloak, Okta, OAuth 2.0, React, Angular, MS SQL Server, MongoDB, Azure Cosmos DB, Apache Solr, Azure Service Bus, RabbitMQ, Azure, AWS, GCP, Docker, Docker Swarm, Kubernetes, Helm, Azure Bicep, Git, GitHub Actions, Azure DevOps, Datadog, Grafana, Kibana, ML.NET, ONNX, VoTT, ComfyUI" width="100%"/>
+>>>>>>> Stashed changes
 
 <img src="assets/div-telemetry.svg" alt="04 // TELEMETRY" width="100%"/>
 

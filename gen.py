@@ -270,11 +270,12 @@ GROUP_COLORS = [ACID, CYAN, PINK, ORANGE, "#FFD400", WHITE]  # same order as the
 
 
 def skill_groups(profile):
+    # README shows the short `core` list; groups without one are left out.
     groups = []
-    for i, g in enumerate(profile.get("skills") or []):
-        items = [s for s in g.get("items") or [] if ok(s)]
+    for g in profile.get("skills") or []:
+        items = [s for s in g.get("core") or [] if ok(s)]
         if items:
-            groups.append((g["group"].upper(), items, GROUP_COLORS[i % len(GROUP_COLORS)]))
+            groups.append((g["group"].upper(), items, GROUP_COLORS[len(groups) % len(GROUP_COLORS)]))
     return groups
 
 
