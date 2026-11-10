@@ -11,7 +11,7 @@
 
 <img src="assets/div-about.svg" alt="01 // ABOUT" width="100%"/>
 
-<img src="assets/about.svg" alt="Status: Building backend systems on .NET with a React front. Training: .NET, React, DevOps. Notes: Field notes in the Engineering Vault." width="100%"/>
+<img src="assets/about.svg" alt="Status: Building backend systems on .NET. Training: .NET, React, DevOps. Notes: Field notes in the Engineering Vault." width="100%"/>
 
 <img src="assets/div-contracts.svg" alt="02 // CONTRACTS" width="100%"/>
 
