@@ -119,7 +119,7 @@ def banner():
     W, H = 1200, 440
     cell = 22
     title = block_text("M1RE", 70, 92, cell)
-    stack = "C# /// .NET /// ASP.NET CORE /// REACT /// TYPESCRIPT /// DOCKER /// KAFKA /// RABBITMQ /// REDIS /// MONGODB /// MS SQL /// "
+    stack = "C# /// .NET /// ASP.NET CORE /// AZURE /// AWS /// KUBERNETES /// DOCKER /// MS SQL /// MONGODB /// APACHE SOLR /// RABBITMQ /// "
     ticker = esc(stack * 3)
     css = f"""
     .blink{{animation:blink 1.1s steps(2,start) infinite}}
@@ -140,7 +140,7 @@ def banner():
     @keyframes beam{{from{{transform:translateX(0)}}to{{transform:translateX(300px)}}}}
     """
     bars = []
-    stats = [("C#/.NET", 0.92, ACID), ("BACKEND", 0.85, ACID), ("REACT/TS", 0.62, PINK), ("DEVOPS", 0.48, ORANGE)]
+    stats = [("C#/.NET", 0.92, ACID), ("BACKEND", 0.85, ACID), ("CLOUD", 0.70, PINK), ("DEVOPS", 0.62, ORANGE)]
     for i, (name, v, col) in enumerate(stats):
         y = 190 + i * 30
         bars.append(
@@ -161,7 +161,7 @@ def banner():
     <rect width="{W}" height="{H}" fill="url(#g)"/>
     <rect x="0" y="0" width="12" height="{H}" fill="{ACID}"/>
 
-    <text x="40" y="44" font-size="13" fill="{DIM}" letter-spacing="3">SECTOR 04 // KYIV-UA // 50.4501N 30.5234E</text>
+    <text x="40" y="44" font-size="13" fill="{DIM}" letter-spacing="3">SECTOR 04 // WROCLAW-PL // 51.1079N 17.0385E</text>
     <text x="1160" y="44" font-size="13" fill="{DIM}" letter-spacing="3" text-anchor="end">RUNNER-ID: M1RE-2020-0917</text>
     <rect x="40" y="58" width="1120" height="1" fill="#2A2A2F"/>
 
@@ -174,7 +174,7 @@ def banner():
     <text x="72" y="292" font-size="30" font-weight="700" fill="{WHITE}" letter-spacing="8">VLADYSLAV KONOKH</text>
     <rect x="72" y="310" width="330" height="34" fill="{PINK}"/>
     <text x="86" y="333" font-size="16" font-weight="700" fill="{BG}" letter-spacing="3">.NET SOFTWARE ENGINEER</text>
-    <text x="72" y="370" font-size="13" fill="{DIM}" letter-spacing="2">// BACKEND · DISTRIBUTED SYSTEMS · REACT</text>
+    <text x="72" y="370" font-size="13" fill="{DIM}" letter-spacing="2">// BACKEND · CLOUD · DEVOPS</text>
 
     {brackets(780, 84, 380, 270)}
     <text x="800" y="116" font-size="12" fill="{ACID}" letter-spacing="3">RUNNER PROFILE</text>
@@ -183,7 +183,7 @@ def banner():
     <text x="800" y="146" font-size="12" fill="{DIM}" letter-spacing="2">CLASS</text>
     <text x="920" y="146" font-size="12" fill="{WHITE}" letter-spacing="2">.NET ENGINEER</text>
     <text x="800" y="168" font-size="12" fill="{DIM}" letter-spacing="2">BASE</text>
-    <text x="920" y="168" font-size="12" fill="{WHITE}" letter-spacing="2">KYIV // UA</text>
+    <text x="920" y="168" font-size="12" fill="{WHITE}" letter-spacing="2">WROCLAW // PL</text>
     {"".join(bars)}
     <g>{barcode(800, 316, 300, 26, 41, WHITE)}</g>
     <rect class="beam" x="800" y="312" width="3" height="34" fill="{PINK}"/>
