@@ -435,6 +435,16 @@ def main():
             ["Pins HighPriority CPU class to a chosen app", "and keeps it there. Set once, forget."],
             ["POWERSHELL", "WINDOWS"], "SHIPPED", PINK, 1.0,
         ),
+        "contract-site.svg": contract(
+            "0x03", "PERSONAL SITE",
+            ["Business card site and ATS-ready resume,", "both generated from a single profile.yml."],
+            ["HTML", "TYPST", "GH ACTIONS"], "ACTIVE", CYAN, 0.9,
+        ),
+        "contract-next.svg": contract(
+            "0x04", "CLASSIFIED",
+            ["Next contract is being negotiated.", "Details will be declassified on launch."],
+            ["TBD"], "PENDING", ORANGE, 0.12,
+        ),
         "loadout.svg": loadout(profile),
     }
     for name, content in files.items():
