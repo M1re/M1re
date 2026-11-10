@@ -2,7 +2,8 @@
 
 - dist/telemetry.svg   HUD panel from the GitHub GraphQL API
 - dist/runner-trace.svg gets the profile background (the snake comes from Platane/snk)
-- README.md            FIELD LOG block: latest notes from the Engineering Vault
+- dist/fieldlog-N.svg  FIELD LOG rows: latest notes from the Engineering Vault
+- README.md            FIELD LOG block linking each row to its note
 
 Env:
   GITHUB_TOKEN  token for the GraphQL API
@@ -24,6 +25,7 @@ ROOT = Path(__file__).parent
 DIST = ROOT / "dist"
 LOGIN = "M1re"
 VAULT_SITE = "https://m1re.github.io/EngineeringVault"
+OUTPUT_URL = "https://raw.githubusercontent.com/M1re/M1re/output"
 
 QUERY = """
 query($login: String!) {
@@ -193,16 +195,43 @@ def field_log(vault_dir, limit=6):
         if len(rows) == limit:
             break
 
-    html = ['<table width="100%">', "<tr><th align=\"left\">DATE</th><th align=\"left\">ENTRY</th><th align=\"left\">SECTOR</th></tr>"]
-    for day, note in rows:
+    # One SVG per row, each wrapped in its own link, so rows stay clickable.
+    html = []
+    for i, (day, note) in enumerate(rows):
         url = f"{VAULT_SITE}/{urllib.parse.quote(note['slug'], safe='/')}"
         sector = " / ".join(Path(note["filePath"]).parent.parts) or "ROOT"
+        (DIST / f"fieldlog-{i + 1}.svg").write_text(log_row(i, day, note["title"], sector), encoding="utf-8")
         html.append(
-            f'<tr><td><code>{day}</code></td><td><a href="{url}"><b>{esc(note["title"])}</b></a></td>'
-            f"<td><code>{esc(sector)}</code></td></tr>"
+            f'<a href="{url}"><img src="{OUTPUT_URL}/fieldlog-{i + 1}.svg" '
+            f'alt="{day} {esc(note["title"])}" width="100%"/></a>'
         )
-    html.append("</table>")
     return "\n".join(html)
+
+
+def log_row(i, day, title, sector):
+    W, H = 1200, 60
+    col = [ACID, PINK, CYAN, ORANGE, WHITE, ACID][i % 6]
+    if len(title) > 44:
+        title = title[:43] + "…"
+    css = f"""
+    .in{{animation:in .5s cubic-bezier(.2,.8,.2,1) {0.12 * i:.2f}s both}}
+    @keyframes in{{from{{opacity:0;transform:translateX(-30px)}}}}
+    .go{{animation:go 1.6s ease-in-out infinite alternate}}
+    @keyframes go{{to{{transform:translateX(6px)}}}}
+    """
+    body = f"""
+    <rect width="{W}" height="{H}" fill="{BG}"/>
+    <g class="in">
+      <rect x="0" y="6" width="{W}" height="{H - 12}" fill="#121215" stroke="#2A2A2F"/>
+      <rect x="0" y="6" width="56" height="{H - 12}" fill="{col}"/>
+      <text x="28" y="37" font-size="16" font-weight="700" fill="{BG}" text-anchor="middle">{i + 1:02d}</text>
+      <text x="80" y="36" font-size="13" fill="{DIM}" letter-spacing="1">{day}</text>
+      <text x="230" y="37" font-size="19" font-weight="700" fill="{WHITE}" letter-spacing="1">{esc(title)}</text>
+      <text x="1130" y="35" font-size="11" fill="{DIM}" letter-spacing="2" text-anchor="end">{esc(sector.upper())}</text>
+      <text class="go" x="1150" y="36" font-size="15" font-weight="700" fill="{col}">&gt;&gt;</text>
+    </g>
+    """
+    return svg(W, H, body, css)
 
 
 def update_readme(block):

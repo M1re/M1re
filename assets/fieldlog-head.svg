@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="44" viewBox="0 0 1200 44"><style>text{font-family:'JetBrains Mono','Cascadia Mono',Consolas,'DejaVu Sans Mono',Menlo,monospace}</style>
+    <rect width="1200" height="44" fill="#0A0A0B"/>
+    <rect x="0" y="43" width="1200" height="1" fill="#2A2A2F"/>
+    <text x="24" y="27" font-size="11" fill="#7C7C78" letter-spacing="2">#</text>
+    <text x="80" y="27" font-size="11" fill="#7C7C78" letter-spacing="2">DATE</text>
+    <text x="230" y="27" font-size="11" fill="#7C7C78" letter-spacing="2">ENTRY // ENGINEERING VAULT</text>
+    <text x="1176" y="27" font-size="11" fill="#7C7C78" letter-spacing="2" text-anchor="end">SECTOR // AUTO-SYNC 03:17 UTC</text>
+    </svg>

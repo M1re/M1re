@@ -286,9 +286,71 @@ def loadout():
     return svg(W, H, body, css)
 
 
+# ---------------------------------------------------------------- about panel
+ABOUT = [
+    ("STATUS", ACID, ["Building backend systems on .NET", "with a React front."]),
+    ("FIELD NOTES", CYAN, ["Writing everything I learn into", "the Engineering Vault."]),
+    ("TRAINING", PINK, ["Going deeper into .NET, React", "and DevOps."]),
+    ("INTEL", ORANGE, ["Apple ads show 9:41: the minute", "Steve Jobs unveiled the first iPhone."]),
+]
+
+
+def about():
+    """Four terminal-style blocks; each prints itself line by line."""
+    W, H = 1200, 300
+    css = """
+    .blink{animation:blink 1.1s steps(2,start) infinite}
+    @keyframes blink{to{visibility:hidden}}
+    """
+    defs, out = [], []
+    for i, (label, col, lines) in enumerate(ABOUT):
+        x = 28 + (i % 2) * 584
+        y = 28 + (i // 2) * 130
+        out.append(
+            f'<rect x="{x}" y="{y}" width="560" height="114" fill="#121215" stroke="#2A2A2F"/>'
+            f'<rect x="{x}" y="{y}" width="4" height="114" fill="{col}"/>'
+            f'<text x="{x + 22}" y="{y + 30}" font-size="13" font-weight="700" fill="{col}" letter-spacing="3">&gt; {esc(label)}</text>'
+            f'<text x="{x + 540}" y="{y + 30}" font-size="10" fill="{DIM}" text-anchor="end" letter-spacing="2">0x0{i + 1}</text>'
+        )
+        for j, line in enumerate(lines):
+            cid = f"t{i}{j}"
+            begin = 0.3 + i * 0.45 + j * 0.35
+            ly = y + 64 + j * 28
+            defs.append(
+                f'<clipPath id="{cid}"><rect x="{x + 20}" y="{ly - 20}" width="0" height="28">'
+                f'<animate attributeName="width" from="0" to="520" dur="0.9s" begin="{begin:.2f}s" fill="freeze"/>'
+                f"</rect></clipPath>"
+            )
+            out.append(
+                f'<text clip-path="url(#{cid})" x="{x + 22}" y="{ly}" font-size="17" fill="{WHITE}">{esc(line)}</text>'
+            )
+    out.append(f'<rect class="blink" x="1150" y="{H - 34}" width="10" height="14" fill="{ACID}"/>')
+    body = (
+        f'<defs>{grid_pattern("g")}{"".join(defs)}</defs>'
+        f'<rect width="{W}" height="{H}" fill="{BG}"/><rect width="{W}" height="{H}" fill="url(#g)"/>'
+        f'{brackets(6, 6, W - 12, H - 12, 22, "#3A3A40")}{"".join(out)}'
+    )
+    return svg(W, H, body, css)
+
+
+def fieldlog_head():
+    W, H = 1200, 44
+    body = f"""
+    <rect width="{W}" height="{H}" fill="{BG}"/>
+    <rect x="0" y="{H - 1}" width="{W}" height="1" fill="#2A2A2F"/>
+    <text x="24" y="27" font-size="11" fill="{DIM}" letter-spacing="2">#</text>
+    <text x="80" y="27" font-size="11" fill="{DIM}" letter-spacing="2">DATE</text>
+    <text x="230" y="27" font-size="11" fill="{DIM}" letter-spacing="2">ENTRY // ENGINEERING VAULT</text>
+    <text x="1176" y="27" font-size="11" fill="{DIM}" letter-spacing="2" text-anchor="end">SECTOR // AUTO-SYNC 03:17 UTC</text>
+    """
+    return svg(W, H, body)
+
+
 def main():
     files = {
         "banner.svg": banner(),
+        "about.svg": about(),
+        "fieldlog-head.svg": fieldlog_head(),
         "div-about.svg": divider(1, "ABOUT", "SEC.01 — PROFILE.DAT", ACID),
         "div-contracts.svg": divider(2, "CONTRACTS", "SEC.02 — ACTIVE OPS", PINK),
         "div-loadout.svg": divider(3, "LOADOUT", "SEC.03 — GEAR.CFG", CYAN),
