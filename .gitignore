@@ -1,2 +1,4 @@
 preview.html
 __pycache__/
+dist/
+.vault/

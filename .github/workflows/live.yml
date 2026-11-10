@@ -1,0 +1,63 @@
+name: live-profile
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # nightly, 03:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [live.py, gen.py, .github/workflows/live.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-profile
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout Engineering Vault history
+        uses: actions/checkout@v4
+        with:
+          repository: M1re/EngineeringVault
+          path: .vault
+          fetch-depth: 0
+          filter: blob:none
+
+      - name: Runner trace (contribution snake)
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/runner-trace.svg?color_snake=#C8FF00&color_dots=#17171A,#3D4D00,#6E8C00,#9FCC00,#C8FF00&color_dot_border=#0A0A0B
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Telemetry HUD and field log
+        run: python live.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VAULT_DIR: .vault
+
+      - name: Commit field log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || { git commit -m "Update field log"; git push; }
+
+      - name: Publish generated SVGs to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -286,34 +286,41 @@ def loadout():
     return svg(W, H, body, css)
 
 
-files = {
-    "banner.svg": banner(),
-    "div-about.svg": divider(1, "ABOUT", "SEC.01 — PROFILE.DAT", ACID),
-    "div-contracts.svg": divider(2, "CONTRACTS", "SEC.02 — ACTIVE OPS", PINK),
-    "div-loadout.svg": divider(3, "LOADOUT", "SEC.03 — GEAR.CFG", CYAN),
-    "div-telemetry.svg": divider(4, "TELEMETRY", "SEC.04 — SIGNAL.LOG", ORANGE),
-    "contract-vault.svg": contract(
-        "0x01", "ENGINEERING VAULT",
-        ["Public knowledge base on what a staff engineer", "should understand deeply. Obsidian → Quartz."],
-        ["OBSIDIAN", "QUARTZ", "GH PAGES"], "ACTIVE", ACID, 0.78,
-    ),
-    "contract-priority.svg": contract(
-        "0x02", "HIGH PRIORITY",
-        ["Pins HighPriority CPU class to a chosen app", "and keeps it there. Set once, forget."],
-        ["POWERSHELL", "WINDOWS"], "SHIPPED", PINK, 1.0,
-    ),
-    "loadout.svg": loadout(),
-}
-for name, content in files.items():
-    (ASSETS / name).write_text(content, encoding="utf-8")
+def main():
+    files = {
+        "banner.svg": banner(),
+        "div-about.svg": divider(1, "ABOUT", "SEC.01 — PROFILE.DAT", ACID),
+        "div-contracts.svg": divider(2, "CONTRACTS", "SEC.02 — ACTIVE OPS", PINK),
+        "div-loadout.svg": divider(3, "LOADOUT", "SEC.03 — GEAR.CFG", CYAN),
+        "div-telemetry.svg": divider(4, "TELEMETRY", "SEC.04 — SIGNAL.LOG", ORANGE),
+        "div-fieldlog.svg": divider(5, "FIELD LOG", "SEC.05 — VAULT.FEED", ACID),
+        "div-tokens.svg": divider(6, "TOKEN BURN", "SEC.06 — AI.USAGE", PINK),
+        "contract-vault.svg": contract(
+            "0x01", "ENGINEERING VAULT",
+            ["Public knowledge base on what a staff engineer", "should understand deeply. Obsidian → Quartz."],
+            ["OBSIDIAN", "QUARTZ", "GH PAGES"], "ACTIVE", ACID, 0.78,
+        ),
+        "contract-priority.svg": contract(
+            "0x02", "HIGH PRIORITY",
+            ["Pins HighPriority CPU class to a chosen app", "and keeps it there. Set once, forget."],
+            ["POWERSHELL", "WINDOWS"], "SHIPPED", PINK, 1.0,
+        ),
+        "loadout.svg": loadout(),
+    }
+    for name, content in files.items():
+        (ASSETS / name).write_text(content, encoding="utf-8")
 
-# Local preview: README is plain HTML, so wrap it in GitHub-dark chrome.
-readme = (ROOT / "README.md").read_text(encoding="utf-8")
-(ROOT / "preview.html").write_text(
-    "<!doctype html><meta charset=utf-8><title>README preview</title>"
-    "<style>body{background:#0d1117;color:#e6edf3;font:16px -apple-system,Segoe UI,sans-serif;margin:0}"
-    "main{max-width:980px;margin:24px auto;padding:32px;border:1px solid #30363d;border-radius:6px}"
-    "img{max-width:100%}a{color:#4493f8}</style><main>" + readme + "</main>",
-    encoding="utf-8",
-)
-print("ok:", ", ".join(files))
+    # Local preview: README is plain HTML, so wrap it in GitHub-dark chrome.
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    (ROOT / "preview.html").write_text(
+        "<!doctype html><meta charset=utf-8><title>README preview</title>"
+        "<style>body{background:#0d1117;color:#e6edf3;font:16px -apple-system,Segoe UI,sans-serif;margin:0}"
+        "main{max-width:980px;margin:24px auto;padding:32px;border:1px solid #30363d;border-radius:6px}"
+        "img{max-width:100%}a{color:#4493f8}</style><main>" + readme + "</main>",
+        encoding="utf-8",
+    )
+    print("ok:", ", ".join(files))
+
+
+if __name__ == "__main__":
+    main()

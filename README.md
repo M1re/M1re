@@ -43,6 +43,28 @@
 
 <img src="assets/div-telemetry.svg" alt="04 // TELEMETRY" width="100%"/>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=M1re&hide_border=true&background=0A0A0B&stroke=2A2A2F&ring=C8FF00&fire=FF2E88&currStreakNum=C8FF00&currStreakLabel=C8FF00&sideNums=E8E8E2&sideLabels=7C7C78&dates=7C7C78&card_width=1000" alt="Contribution streak" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/M1re/M1re/output/telemetry.svg" alt="GitHub telemetry: contributions, streaks, weekly activity, language mix" width="100%"/>
+
+<img src="https://raw.githubusercontent.com/M1re/M1re/output/runner-trace.svg" alt="Runner trace: contribution graph eaten by a snake" width="100%"/>
+
+<img src="assets/div-fieldlog.svg" alt="05 // FIELD LOG" width="100%"/>
+
+<p><sub>LATEST ENTRIES FROM THE <a href="https://m1re.github.io/EngineeringVault">ENGINEERING VAULT</a> // AUTO-SYNCED NIGHTLY</sub></p>
+
+<!-- FIELD-LOG:START -->
+<table width="100%">
+<tr><th align="left">DATE</th><th align="left">ENTRY</th><th align="left">SECTOR</th></tr>
+<tr><td><code>2026-11-09</code></td><td><a href="https://m1re.github.io/EngineeringVault/Architecture/Reliability/Idempotency"><b>Idempotency</b></a></td><td><code>Architecture / Reliability</code></td></tr>
+<tr><td><code>2026-11-09</code></td><td><a href="https://m1re.github.io/EngineeringVault/Programming/CSharp/Const-vs-Readonly"><b>const vs readonly</b></a></td><td><code>Programming / CSharp</code></td></tr>
+<tr><td><code>2026-11-09</code></td><td><a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Async-and-Await"><b>Async/Await</b></a></td><td><code>Programming / Concurrency</code></td></tr>
+<tr><td><code>2026-11-09</code></td><td><a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Concurrency-vs-Parallelism"><b>Concurrency vs Parallelism</b></a></td><td><code>Programming / Concurrency</code></td></tr>
+<tr><td><code>2026-11-09</code></td><td><a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Threads-and-the-Thread-Pool"><b>Threads and the Thread Pool</b></a></td><td><code>Programming / Concurrency</code></td></tr>
+<tr><td><code>2026-11-09</code></td><td><a href="https://m1re.github.io/EngineeringVault/Programming/Runtime/Value-vs-Reference-Types"><b>Value vs Reference Types</b></a></td><td><code>Programming / Runtime</code></td></tr>
+</table>
+<!-- FIELD-LOG:END -->
+
+<!-- TOKEN BURN: enable after `npx tokscale@latest submit` creates the profile.
+<img src="assets/div-tokens.svg" alt="06 // TOKEN BURN" width="100%"/>
+
+<a href="https://tokscale.ai/u/M1re"><img src="https://tokscale.ai/api/embed/M1re/svg?template=terminal&color=green&theme=dark&graph=1&sort=cost" alt="AI token usage" width="100%"/></a>
+TOKEN BURN -->
