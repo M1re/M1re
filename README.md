@@ -43,12 +43,12 @@
 <a href="https://m1re.github.io/EngineeringVault"><img src="assets/fieldlog-head.svg" alt="Latest entries from the Engineering Vault" width="100%"/></a>
 
 <!-- FIELD-LOG:START -->
-<a href="https://m1re.github.io/EngineeringVault/Architecture/Reliability/Idempotency"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-1.svg" alt="2026-11-09 Idempotency" width="100%"/></a>
-<a href="https://m1re.github.io/EngineeringVault/Programming/CSharp/Const-vs-Readonly"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-2.svg" alt="2026-11-09 const vs readonly" width="100%"/></a>
-<a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Async-and-Await"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-3.svg" alt="2026-11-09 Async/Await" width="100%"/></a>
-<a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Concurrency-vs-Parallelism"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-4.svg" alt="2026-11-09 Concurrency vs Parallelism" width="100%"/></a>
-<a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Threads-and-the-Thread-Pool"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-5.svg" alt="2026-11-09 Threads and the Thread Pool" width="100%"/></a>
-<a href="https://m1re.github.io/EngineeringVault/Programming/Runtime/Value-vs-Reference-Types"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-6.svg" alt="2026-11-09 Value vs Reference Types" width="100%"/></a>
+<a href="https://m1re.github.io/EngineeringVault/Programming/CSharp/Const-vs-Readonly"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-1.svg" alt="2026-11-12 const vs readonly" width="100%"/></a>
+<a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Threads-and-the-Thread-Pool"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-2.svg" alt="2026-11-12 Threads and the Thread Pool" width="100%"/></a>
+<a href="https://m1re.github.io/EngineeringVault/Architecture/Reliability/Idempotency"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-3.svg" alt="2026-11-09 Idempotency" width="100%"/></a>
+<a href="https://m1re.github.io/EngineeringVault/Programming/Runtime/Value-vs-Reference-Types"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-4.svg" alt="2026-11-09 Value vs Reference Types" width="100%"/></a>
+<a href="https://m1re.github.io/EngineeringVault/Programming/Concurrency/Deadlocks"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-5.svg" alt="2026-11-09 Deadlocks" width="100%"/></a>
+<a href="https://m1re.github.io/EngineeringVault/Programming/AspNetWebApi/Authentication"><img src="https://raw.githubusercontent.com/M1re/M1re/output/fieldlog-6.svg" alt="2026-11-09 Authentication" width="100%"/></a>
 <!-- FIELD-LOG:END -->
 
 <img src="assets/div-tokens.svg" alt="06 // TOKEN BURN" width="100%"/>
