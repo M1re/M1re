@@ -173,7 +173,7 @@ def banner():
 
     <text x="72" y="292" font-size="30" font-weight="700" fill="{WHITE}" letter-spacing="8">VLADYSLAV KONOKH</text>
     <rect x="72" y="310" width="330" height="34" fill="{PINK}"/>
-    <text x="86" y="333" font-size="16" font-weight="700" fill="{BG}" letter-spacing="3">.NET SOFTWARE ENGINEER</text>
+    <text x="86" y="333" font-size="16" font-weight="700" fill="{BG}" letter-spacing="3">SENIOR .NET ENGINEER</text>
     <text x="72" y="370" font-size="13" fill="{DIM}" letter-spacing="2">// BACKEND · CLOUD · DEVOPS</text>
 
     {brackets(780, 84, 380, 270)}
@@ -181,7 +181,7 @@ def banner():
     <g class="blink"><circle cx="1050" cy="112" r="5" fill="{ACID}"/></g>
     <text x="1140" y="116" font-size="12" fill="{ACID}" letter-spacing="3" text-anchor="end">ONLINE</text>
     <text x="800" y="146" font-size="12" fill="{DIM}" letter-spacing="2">CLASS</text>
-    <text x="920" y="146" font-size="12" fill="{WHITE}" letter-spacing="2">.NET ENGINEER</text>
+    <text x="920" y="146" font-size="12" fill="{WHITE}" letter-spacing="2">SENIOR .NET ENGINEER</text>
     <text x="800" y="168" font-size="12" fill="{DIM}" letter-spacing="2">BASE</text>
     <text x="920" y="168" font-size="12" fill="{WHITE}" letter-spacing="2">WROCLAW // PL</text>
     {"".join(bars)}

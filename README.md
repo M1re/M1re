@@ -1,19 +1,19 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="M1RE — Vladyslav Konokh, .NET Software Engineer" width="100%"/>
+  <img src="assets/banner.svg" alt="M1RE — Vladyslav Konokh, Senior .NET Engineer" width="100%"/>
 </div>
 
 <p align="center">
   <a href="https://m1re.github.io/resume.pdf"><img src="https://img.shields.io/badge/RESUME_PDF-0A0A0B?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkY1QTFGIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMTIgM3YxMm0tNS01IDUgNSA1LTVNNCAyMGgxNiIvPjwvc3ZnPg%3D%3D&labelColor=0A0A0B" alt="Download resume (PDF)"/></a>
   <a href="https://www.linkedin.com/in/vladyslav-konokh"><img src="https://img.shields.io/badge/LINKEDIN-0A0A0B?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI0M4RkYwMCIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B&labelColor=0A0A0B" alt="LinkedIn"/></a>
-  <a href="https://t.me/DisrespectfulOne"><img src="https://img.shields.io/badge/TELEGRAM-0A0A0B?style=for-the-badge&logo=telegram&logoColor=E8E8E2&labelColor=0A0A0B" alt="Telegram"/></a>
-  <a href="mailto:actuallydisrespectful@gmail.com"><img src="https://img.shields.io/badge/MAIL-0A0A0B?style=for-the-badge&logo=gmail&logoColor=FF2E88&labelColor=0A0A0B" alt="Mail"/></a>
+  <a href="https://t.me/vladyslav_kn"><img src="https://img.shields.io/badge/TELEGRAM-0A0A0B?style=for-the-badge&logo=telegram&logoColor=E8E8E2&labelColor=0A0A0B" alt="Telegram"/></a>
+  <a href="mailto:vladyslav.knkh@icloud.com"><img src="https://img.shields.io/badge/MAIL-0A0A0B?style=for-the-badge&logo=icloud&logoColor=FF2E88&labelColor=0A0A0B" alt="Mail"/></a>
   <a href="https://m1re.github.io/EngineeringVault"><img src="https://img.shields.io/badge/ENGINEERING_VAULT-0A0A0B?style=for-the-badge&logo=obsidian&logoColor=00E5FF&labelColor=0A0A0B" alt="Engineering Vault"/></a>
   <a href="https://github.com/M1re?tab=followers"><img src="https://img.shields.io/github/followers/M1re?style=for-the-badge&logo=github&logoColor=FF5A1F&label=FOLLOWERS&labelColor=0A0A0B&color=0A0A0B" alt="Followers"/></a>
 </p>
 
 <img src="assets/div-about.svg" alt="01 // ABOUT" width="100%"/>
 
-<img src="assets/about.svg" alt="Status: Building backend systems on .NET. Training: .NET, Kubernetes, DevOps. Notes: Field notes in the Engineering Vault." width="100%"/>
+<img src="assets/about.svg" alt="Status: Building backend systems on .NET. Training: .NET, Kubernetes, AI agents. Notes: Field notes in the Engineering Vault." width="100%"/>
 
 <img src="assets/div-contracts.svg" alt="02 // CONTRACTS" width="100%"/>
 
@@ -30,7 +30,7 @@
 
 <img src="assets/div-loadout.svg" alt="03 // LOADOUT" width="100%"/>
 
-<img src="assets/loadout.svg" alt="Stack: C#, Python, C++, SQL, PowerShell, .NET, ASP.NET Core, Entity Framework Core, REST APIs, Microservices, CQRS, xUnit, Keycloak, Okta, OAuth 2.0, React, Angular, MS SQL Server, MongoDB, Azure Cosmos DB, Apache Solr, Azure Service Bus, RabbitMQ, Azure, AWS, GCP, Docker, Docker Swarm, Kubernetes, Helm, Git, GitHub Actions, Datadog, Grafana, Kibana, ML.NET, ONNX, VoTT, ComfyUI" width="100%"/>
+<img src="assets/loadout.svg" alt="Stack: C#, Python, SQL, TypeScript, .NET, ASP.NET Core, Entity Framework Core, REST APIs, Microservices, Event-Driven Architecture, CQRS, DDD, xUnit, MS SQL Server, MongoDB, Azure Cosmos DB, Apache Solr, Azure Service Bus, RabbitMQ, Azure, AWS, Docker, Kubernetes, Helm, GitHub Actions, GitLab CI, LLM agents, Claude Code, MCP, ML.NET, ONNX, YOLO, Datadog, Grafana, Kibana, Keycloak, Okta, OAuth 2.0, Angular, React" width="100%"/>
 
 <img src="assets/div-telemetry.svg" alt="04 // TELEMETRY" width="100%"/>
 

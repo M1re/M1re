@@ -39,7 +39,7 @@
 
     <text x="72" y="292" font-size="30" font-weight="700" fill="#E8E8E2" letter-spacing="8">VLADYSLAV KONOKH</text>
     <rect x="72" y="310" width="330" height="34" fill="#FF2E88"/>
-    <text x="86" y="333" font-size="16" font-weight="700" fill="#0A0A0B" letter-spacing="3">.NET SOFTWARE ENGINEER</text>
+    <text x="86" y="333" font-size="16" font-weight="700" fill="#0A0A0B" letter-spacing="3">SENIOR .NET ENGINEER</text>
     <text x="72" y="370" font-size="13" fill="#7C7C78" letter-spacing="2">// BACKEND · CLOUD · DEVOPS</text>
 
     <path d="M780,102V84H798 M1142,84H1160V102 M1160,336V354H1142 M798,354H780V336" fill="none" stroke="#C8FF00" stroke-width="2"/>
@@ -47,7 +47,7 @@
     <g class="blink"><circle cx="1050" cy="112" r="5" fill="#C8FF00"/></g>
     <text x="1140" y="116" font-size="12" fill="#C8FF00" letter-spacing="3" text-anchor="end">ONLINE</text>
     <text x="800" y="146" font-size="12" fill="#7C7C78" letter-spacing="2">CLASS</text>
-    <text x="920" y="146" font-size="12" fill="#E8E8E2" letter-spacing="2">.NET ENGINEER</text>
+    <text x="920" y="146" font-size="12" fill="#E8E8E2" letter-spacing="2">SENIOR .NET ENGINEER</text>
     <text x="800" y="168" font-size="12" fill="#7C7C78" letter-spacing="2">BASE</text>
     <text x="920" y="168" font-size="12" fill="#E8E8E2" letter-spacing="2">WROCLAW // PL</text>
     <text x="800" y="200" font-size="12" fill="#7C7C78" letter-spacing="2">C#/.NET</text><rect x="920" y="190" width="220" height="12" fill="#1C1C20"/><rect class="bar" style="transform-origin:920px 0;animation-delay:0.3s" x="920" y="190" width="202" height="12" fill="#C8FF00"/><text x="800" y="230" font-size="12" fill="#7C7C78" letter-spacing="2">BACKEND</text><rect x="920" y="220" width="220" height="12" fill="#1C1C20"/><rect class="bar" style="transform-origin:920px 0;animation-delay:0.55s" x="920" y="220" width="187" height="12" fill="#C8FF00"/><text x="800" y="260" font-size="12" fill="#7C7C78" letter-spacing="2">CLOUD</text><rect x="920" y="250" width="220" height="12" fill="#1C1C20"/><rect class="bar" style="transform-origin:920px 0;animation-delay:0.8s" x="920" y="250" width="154" height="12" fill="#FF2E88"/><text x="800" y="290" font-size="12" fill="#7C7C78" letter-spacing="2">DEVOPS</text><rect x="920" y="280" width="220" height="12" fill="#1C1C20"/><rect class="bar" style="transform-origin:920px 0;animation-delay:1.05s" x="920" y="280" width="136" height="12" fill="#FF5A1F"/>
