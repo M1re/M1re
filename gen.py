@@ -206,7 +206,7 @@ def divider(idx, label, code, accent):
     W, H = 1200, 64
     css = """
     .run{animation:run 3.4s linear infinite}
-    @keyframes run{from{transform:translateX(0)}to{transform:translateX(560px)}}
+    @keyframes run{from{transform:translateX(0)}to{transform:translateX(500px)}}  /* track 560 minus runner 60 */
     .blink{animation:blink 1.1s steps(2,start) infinite}
     @keyframes blink{to{visibility:hidden}}
     """
