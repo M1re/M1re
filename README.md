@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="M1RE — Vladyslav Konokh, Senior .NET Engineer" width="100%"/>
+  <a href="https://m1re.github.io"><img src="assets/banner.svg" alt="M1RE — Vladyslav Konokh, Senior .NET Engineer" width="100%"/></a>
 </div>
 
 <p align="center">
